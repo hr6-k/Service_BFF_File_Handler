@@ -1,12 +1,14 @@
-import express, { Request, Response, NextFunction } from 'express'; // وارد کردن تایپ‌های express
+import express, { Request, Response, NextFunction } from 'express';
 import multer from 'multer';
 import path from 'path';
 import dotenv from 'dotenv';
+import { v4 as uuidv4 } from 'uuid'; // برای تولید request ID منحصر به فرد
+import logger from './logger'; // وارد کردن logger
 
-import { dynamicThrottling } from './dynamicThrottling'; // ایمپورت میدل‌ور محدودسازی دینامیک
+import { dynamicThrottling } from './dynamicThrottling';
 import { healthCheck } from './healthCheck';
-import { healthCheck_C } from './healthCheckController'; // وارد کردن کنترلر health check
-import { basicAuthentication } from './auth';  // ایمپورت میدل‌ور
+import { healthCheck_C } from './healthCheckController';
+import { basicAuthentication } from './auth';
 
 dotenv.config();
 
@@ -44,38 +46,39 @@ app.use(dynamicThrottling);
 
 // مسیر بررسی سلامت سیستم
 app.get('/health', healthCheck);
-
-// پیکربندی مسیر health check
 app.get('/health_C', healthCheck_C);
-
-
-
-// // مسیر امن برای تست
-// app.get('/secure', (req, res) => {
-//   res.send('Welcome to the secure area!');
-// });
 
 // محافظت از مسیرهای خاص با Basic Authentication
 app.use('/secure', basicAuthentication);
 
-// یک مسیر امن برای تست میدل‌ور
-app.get('/secure/protected-resource', (req, res) => {
-  res.send('این یک منبع محافظت‌شده است');
-});
-
-
-
-
-
-
-
-// تغییر در تابع handler: به جای برگرداندن Response، از Promise<void> استفاده می‌کنیم.
+// مسیر برای آپلود فایل
 app.post('/upload', upload.single('file'), async (req: CustomRequest, res: Response): Promise<void> => {
+  const requestId = uuidv4(); // ایجاد شناسه منحصر به فرد برای درخواست
+  const startTime = Date.now(); // زمان شروع آپلود
+
+  logger.info(`Request ${requestId} started`, { method: req.method, path: req.path });
+
   if (!req.file) {
-    res.status(400).json({ message: 'No file uploaded' }); // اگر فایلی آپلود نشد
+    logger.error(`Request ${requestId} failed: No file uploaded`);
+    res.status(400).json({ message: 'No file uploaded' });
     return;
   }
-  res.json({ message: 'File uploaded successfully', filename: req.file.filename }); // فایل با موفقیت آپلود شد
+
+  // اطلاعات فایل آپلود شده
+  const fileName = req.file.filename;
+  const fileSize = req.file.size;
+  const endTime = Date.now(); // زمان پایان آپلود
+  const duration = endTime - startTime; // مدت زمان پردازش درخواست
+
+  // ثبت متریک‌ها
+  logger.info(`Request ${requestId} completed`, {
+    fileName: fileName,
+    fileSize: fileSize,
+    duration: duration,
+    status: 'success',
+  });
+
+  res.json({ message: 'File uploaded successfully', filename: fileName });
 });
 
 // میدل‌ور برای مدیریت خطاها
@@ -92,3 +95,5 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+export default app;
