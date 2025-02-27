@@ -6,6 +6,9 @@ import dotenv from 'dotenv';
 import { dynamicThrottling } from './dynamicThrottling'; // ایمپورت میدل‌ور محدودسازی دینامیک
 import { healthCheck } from './healthCheck';
 
+import { healthCheck_C } from './healthCheckController';  // وارد کردن کنترلر health check
+
+
 dotenv.config();
 
 const app = express();
@@ -44,6 +47,17 @@ app.use(dynamicThrottling);
 
 // مسیر بررسی سلامت سیستم
 app.get('/health', healthCheck);
+
+
+// پیکربندی مسیر health check
+app.get('/health_C', healthCheck_C);
+
+
+
+
+
+
+
 
 // تغییر در تابع handler: به جای برگرداندن Response، از Promise<void> استفاده می‌کنیم.
 app.post('/upload', upload.single('file'), async (req: CustomRequest, res: Response): Promise<void> => {
