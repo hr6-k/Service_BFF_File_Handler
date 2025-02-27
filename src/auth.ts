@@ -1,11 +1,11 @@
 import dotenv from 'dotenv';
-dotenv.config(); // باید در ابتدای کد قرار بگیرد
+dotenv.config(); 
 
 import { Request, Response, NextFunction } from 'express';
 import basicAuth from 'basic-auth';
 import bcrypt from 'bcrypt';
 
-// چاپ مقادیر متغیرهای محیطی برای بررسی
+
 console.log('BASIC_AUTH_USERNAME:', process.env.BASIC_AUTH_USERNAME);
 console.log('BASIC_AUTH_PASSWORD:', process.env.BASIC_AUTH_PASSWORD);
 
@@ -17,7 +17,7 @@ const USERS = {
 export const basicAuthentication = (req: Request, res: Response, next: NextFunction): void => {
   const user = basicAuth(req);
 
-  console.log('Received user:', user); // چاپ مقادیر دریافت شده
+  console.log('Received user:', user); 
 
   if (!user || user.name !== USERS.username || !bcrypt.compareSync(user.pass, USERS.password)) {
     console.log('Unauthorized access attempt');
