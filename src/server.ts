@@ -4,7 +4,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 
 import { dynamicThrottling } from './dynamicThrottling'; // ایمپورت میدل‌ور محدودسازی دینامیک
-
+import { healthCheck } from './healthCheck';
 
 dotenv.config();
 
@@ -42,7 +42,8 @@ interface CustomRequest extends Request {
 // استفاده از میدل‌ور محدودسازی دینامیک
 app.use(dynamicThrottling);
 
-
+// مسیر بررسی سلامت سیستم
+app.get('/health', healthCheck);
 
 // تغییر در تابع handler: به جای برگرداندن Response، از Promise<void> استفاده می‌کنیم.
 app.post('/upload', upload.single('file'), async (req: CustomRequest, res: Response): Promise<void> => {

@@ -13,7 +13,8 @@ export const dynamicThrottling = (req: Request, res: Response, next: NextFunctio
     const memoryPercent = (memoryUsage / totalMemory) * 100;
 
     // اگر مصرف CPU بیش از 80% باشد یا حافظه آزاد کمتر از 20% باشد
-    if (stats.cpu > 80 || memoryPercent < 20) {
+    // if (stats.cpu > 80 || memoryPercent < 20) {
+    if (stats.cpu > 800 || memoryPercent < -20) {
       res.status(429).send('سیستم تحت فشار است. لطفاً بعداً تلاش کنید.');
     } else {
       // اگر وضعیت سیستم نرمال بود، درخواست ادامه پیدا می‌کند
