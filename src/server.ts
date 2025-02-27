@@ -1,3 +1,5 @@
+
+
 import express, { Request, Response, NextFunction } from 'express';
 import multer from 'multer';
 import path from 'path';
@@ -9,7 +11,7 @@ dotenv.config();
 
 const app = express();
 
-// File storage configuration
+// File storage configuration using Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/');
@@ -21,7 +23,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 250 * 1024 * 1024 }, // File size limit
+  limits: { fileSize: 250 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
     if (file.mimetype !== 'text/csv') {
       return cb(new Error('Only CSV files are allowed!'));
@@ -30,12 +32,10 @@ const upload = multer({
   }
 });
 
-// Correct typing for `req` to support the `file` property
 interface CustomRequest extends Request {
   file?: Express.Multer.File;
 }
 
-// Concurrency limit using request queue
 const MAX_CONCURRENT_REQUESTS = 5;
 let currentRequests = 0;
 const requestQueue: any[] = [];
@@ -63,20 +63,17 @@ app.post('/upload', upload.single('file'), (req: CustomRequest, res: Response) =
       }
 
       const fileName = req.file.filename;
-      const fileSize = req.file.size;
 
-      // Process the uploaded file
       setTimeout(() => {
         res.json({ message: 'File uploaded successfully', filename: fileName });
-        resolve({ message: 'File uploaded successfully', filename: fileName }); // Resolve with success message
-      }, 2000); // Assume processing takes 2 seconds
+        resolve({ message: 'File uploaded successfully', filename: fileName });
+      }, 2000);
     });
   });
 
-  processQueue(); // Process the request queue
+  processQueue();
 });
 
-// Middleware for error handling
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof multer.MulterError) {
     res.status(500).json({ message: `Multer error: ${err.message}` });
@@ -87,4 +84,11 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   }
 });
 
+// Server initialization
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+export { server }; // Export server for testing purposes
 export default app;
