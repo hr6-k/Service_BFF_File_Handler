@@ -1,11 +1,32 @@
+// {
+//     "compilerOptions": {
+//       "target": "ES6",
+//       "module": "CommonJS",
+//       "outDir": "./dist",
+//       "rootDir": "./src",
+//       "strict": true,
+//       "esModuleInterop": true
+//     },
+//   "include": ["src", "__tests__"]
+//   }
+
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "CommonJS",
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "strict": true,
-      "esModuleInterop": true
-    }
-  }
-  
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "rootDir": "./",  // تغییر به ریشه پروژه
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*",      // شامل تمام فایل‌ها در پوشه src
+    "__tests__/**/*" // و فایل‌های تست در پوشه __tests__
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

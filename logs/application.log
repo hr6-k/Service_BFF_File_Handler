@@ -1,2 +1,108 @@
 2025-02-26T17:41:27.644Z info: Request 034285bc-360a-4287-ada3-07571f4e2fc3 started {"method":"POST","path":"/upload"}
 2025-02-26T17:41:27.648Z info: Request 034285bc-360a-4287-ada3-07571f4e2fc3 completed {"fileName":"1740591687642.csv","fileSize":13,"duration":4,"status":"success"}
+2025-02-26T17:54:27.108Z info: Request e4895975-7c0d-420f-90eb-53b91e76e64d started {"method":"POST","path":"/upload"}
+2025-02-26T17:54:27.117Z info: Request e4895975-7c0d-420f-90eb-53b91e76e64d completed {"fileName":"1740592467107.csv","fileSize":23,"duration":9,"status":"success"}
+2025-02-26T17:54:27.134Z info: Request c24a41eb-dbfc-4cc6-af0b-282150365ede started {"method":"POST","path":"/upload"}
+2025-02-26T17:54:27.136Z error: Request c24a41eb-dbfc-4cc6-af0b-282150365ede failed: No file uploaded 
+2025-02-26T17:55:57.924Z info: Request 787bd2ac-dc46-497c-8f91-4057d6a6524a started {"method":"POST","path":"/upload"}
+2025-02-26T17:55:57.927Z info: Request 787bd2ac-dc46-497c-8f91-4057d6a6524a completed {"fileName":"1740592557922.csv","fileSize":23,"duration":3,"status":"success"}
+2025-02-26T17:55:57.939Z info: Request 121ed35b-f535-4ef9-b5d0-183757662bf5 started {"method":"POST","path":"/upload"}
+2025-02-26T17:55:57.940Z error: Request 121ed35b-f535-4ef9-b5d0-183757662bf5 failed: No file uploaded 
+2025-02-26T17:59:19.592Z info: Request 411de806-ad70-43a8-b35b-617b0c83041b started {"method":"POST","path":"/upload"}
+2025-02-26T17:59:19.596Z info: Request 411de806-ad70-43a8-b35b-617b0c83041b completed {"fileName":"1740592759590.csv","fileSize":23,"duration":5,"status":"success"}
+2025-02-26T17:59:19.612Z info: Request 1c600322-313c-4b4b-b465-ea5a95c52e1d started {"method":"POST","path":"/upload"}
+2025-02-26T17:59:19.613Z error: Request 1c600322-313c-4b4b-b465-ea5a95c52e1d failed: No file uploaded 
+2025-02-26T17:59:34.650Z info: Request 06d3cb39-378f-4a7a-85f8-2ce3e8ae8a2a started {"method":"POST","path":"/upload"}
+2025-02-26T17:59:34.655Z info: Request 06d3cb39-378f-4a7a-85f8-2ce3e8ae8a2a completed {"fileName":"1740592774649.csv","fileSize":23,"duration":5,"status":"success"}
+2025-02-26T17:59:34.668Z info: Request e75d092d-4cdc-4315-8af9-cf9d8252960d started {"method":"POST","path":"/upload"}
+2025-02-26T17:59:34.670Z error: Request e75d092d-4cdc-4315-8af9-cf9d8252960d failed: No file uploaded 
+2025-02-26T20:04:08.395Z info: Request 9acdb102-7da4-4370-8255-34456c6b1484 started {"method":"POST","path":"/upload"}
+2025-02-26T20:04:08.397Z info: Request 9acdb102-7da4-4370-8255-34456c6b1484 completed {"fileName":"1740600248392.csv","fileSize":23,"duration":3,"status":"success"}
+2025-02-26T20:04:08.418Z info: Request b9a74fd9-2784-471c-bbb0-b323efedc698 started {"method":"POST","path":"/upload"}
+2025-02-26T20:04:08.418Z error: Request b9a74fd9-2784-471c-bbb0-b323efedc698 failed: No file uploaded 
+2025-02-26T20:04:08.460Z info: Request 56ee960b-1d8f-4077-b814-54d9e58ef61e started {"method":"POST","path":"/upload"}
+2025-02-26T20:04:08.460Z info: Request 56ee960b-1d8f-4077-b814-54d9e58ef61e completed {"fileName":"1740600248430.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:04:08.467Z info: Request fd9e1fc2-9ca5-4881-b581-6322df000523 started {"method":"POST","path":"/upload"}
+2025-02-26T20:04:08.468Z info: Request fd9e1fc2-9ca5-4881-b581-6322df000523 completed {"fileName":"1740600248467.csv","fileSize":23,"duration":1,"status":"success"}
+2025-02-26T20:04:08.468Z info: Request 02927e20-b64e-4e0b-8abb-0c7f7630d5f1 started {"method":"POST","path":"/upload"}
+2025-02-26T20:04:08.468Z info: Request 02927e20-b64e-4e0b-8abb-0c7f7630d5f1 completed {"fileName":"1740600248467.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:04:08.480Z info: Request f180b3f3-3623-4f71-86f7-f05aba6f4f02 started {"method":"POST","path":"/upload"}
+2025-02-26T20:04:08.480Z info: Request f180b3f3-3623-4f71-86f7-f05aba6f4f02 completed {"fileName":"1740600248477.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:07:27.638Z info: Request 179833b3-7244-4ddd-bd22-713352688849 started {"method":"POST","path":"/upload"}
+2025-02-26T20:07:27.642Z info: Request 179833b3-7244-4ddd-bd22-713352688849 completed {"fileName":"1740600447637.csv","fileSize":23,"duration":3,"status":"success"}
+2025-02-26T20:07:27.666Z info: Request 7dded106-728b-4e47-bca9-6809d8c43c7f started {"method":"POST","path":"/upload"}
+2025-02-26T20:07:27.666Z error: Request 7dded106-728b-4e47-bca9-6809d8c43c7f failed: No file uploaded 
+2025-02-26T20:07:27.701Z info: Request bc6b31af-33bf-47d4-9942-d47191b23bb3 started {"method":"POST","path":"/upload"}
+2025-02-26T20:07:27.701Z info: Request bc6b31af-33bf-47d4-9942-d47191b23bb3 completed {"fileName":"1740600447683.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:07:27.714Z info: Request 497c4ccf-56ff-4b1b-856f-71ae050cca0b started {"method":"POST","path":"/upload"}
+2025-02-26T20:07:27.714Z info: Request 497c4ccf-56ff-4b1b-856f-71ae050cca0b completed {"fileName":"1740600447713.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:07:27.715Z info: Request 58b4d537-0e4d-48aa-a0bb-9c9d7dcb45dd started {"method":"POST","path":"/upload"}
+2025-02-26T20:07:27.715Z info: Request 58b4d537-0e4d-48aa-a0bb-9c9d7dcb45dd completed {"fileName":"1740600447714.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:07:27.730Z info: Request 6e9656ad-16a8-4513-97c4-a5014b900b93 started {"method":"POST","path":"/upload"}
+2025-02-26T20:07:27.730Z info: Request 6e9656ad-16a8-4513-97c4-a5014b900b93 completed {"fileName":"1740600447723.csv","fileSize":2399999,"duration":1,"status":"success"}
+2025-02-26T20:08:28.216Z info: Request 1df646f9-4bf0-4c43-b234-9dec50028f53 started {"method":"POST","path":"/upload"}
+2025-02-26T20:08:28.218Z info: Request 1df646f9-4bf0-4c43-b234-9dec50028f53 completed {"fileName":"1740600508215.csv","fileSize":23,"duration":2,"status":"success"}
+2025-02-26T20:08:28.229Z info: Request b37c6f19-78ed-42c9-ada2-20929af11e07 started {"method":"POST","path":"/upload"}
+2025-02-26T20:08:28.229Z error: Request b37c6f19-78ed-42c9-ada2-20929af11e07 failed: No file uploaded 
+2025-02-26T20:13:28.545Z info: Request 81a1fc19-2d1d-4cca-b166-844ee58394ae started {"method":"POST","path":"/upload"}
+2025-02-26T20:13:28.549Z info: Request 81a1fc19-2d1d-4cca-b166-844ee58394ae completed {"fileName":"1740600808544.csv","fileSize":23,"duration":4,"status":"success"}
+2025-02-26T20:13:28.566Z info: Request ae115c28-e0c8-4f6a-93d1-b9c0b092bd7f started {"method":"POST","path":"/upload"}
+2025-02-26T20:13:28.566Z error: Request ae115c28-e0c8-4f6a-93d1-b9c0b092bd7f failed: No file uploaded 
+2025-02-26T20:13:28.579Z info: Request 01d425ee-c277-49a5-b4ea-dd6212bd80db started {"method":"POST","path":"/upload"}
+2025-02-26T20:13:28.580Z info: Request 01d425ee-c277-49a5-b4ea-dd6212bd80db completed {"fileName":"1740600808578.csv","fileSize":23,"duration":1,"status":"success"}
+2025-02-26T20:13:28.599Z info: Request 1c53c5bf-4b3c-4d7b-aa5b-ef61759b3591 started {"method":"POST","path":"/upload"}
+2025-02-26T20:13:28.600Z info: Request 1c53c5bf-4b3c-4d7b-aa5b-ef61759b3591 completed {"fileName":"1740600808586.csv","fileSize":2399999,"duration":1,"status":"success"}
+2025-02-26T20:14:28.280Z info: Request 7a79d05f-5b83-4f47-9a8e-34e226e145bf started {"method":"POST","path":"/upload"}
+2025-02-26T20:14:28.282Z info: Request 7a79d05f-5b83-4f47-9a8e-34e226e145bf completed {"fileName":"1740600868278.csv","fileSize":23,"duration":2,"status":"success"}
+2025-02-26T20:14:28.299Z info: Request d1ed6b2b-d86f-46ac-8d4c-91a837c37cff started {"method":"POST","path":"/upload"}
+2025-02-26T20:14:28.300Z error: Request d1ed6b2b-d86f-46ac-8d4c-91a837c37cff failed: No file uploaded 
+2025-02-26T20:14:28.311Z info: Request 9f405b45-0c7f-4bb0-935c-43dddea60a50 started {"method":"POST","path":"/upload"}
+2025-02-26T20:14:28.311Z info: Request 9f405b45-0c7f-4bb0-935c-43dddea60a50 completed {"fileName":"1740600868310.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:14:28.334Z info: Request c1926eae-2e22-4e47-8479-902705da50bf started {"method":"POST","path":"/upload"}
+2025-02-26T20:14:28.335Z info: Request c1926eae-2e22-4e47-8479-902705da50bf completed {"fileName":"1740600868319.csv","fileSize":2399999,"duration":1,"status":"success"}
+2025-02-26T20:20:47.239Z info: Request f321c619-3e7a-4830-9148-2dc137d76a37 started {"method":"POST","path":"/upload"}
+2025-02-26T20:20:47.241Z info: Request f321c619-3e7a-4830-9148-2dc137d76a37 completed {"fileName":"1740601247237.csv","fileSize":23,"duration":3,"status":"success"}
+2025-02-26T20:20:47.259Z info: Request 416ce243-0f0a-4ef8-95f9-f61b1920275e started {"method":"POST","path":"/upload"}
+2025-02-26T20:20:47.260Z error: Request 416ce243-0f0a-4ef8-95f9-f61b1920275e failed: No file uploaded 
+2025-02-26T20:20:47.274Z info: Request 56b30709-5225-452a-8780-1206fa9fcadf started {"method":"POST","path":"/upload"}
+2025-02-26T20:20:47.274Z info: Request 56b30709-5225-452a-8780-1206fa9fcadf completed {"fileName":"1740601247273.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:20:47.295Z info: Request c296251b-b56e-4bae-a4ce-a4ee9f947f57 started {"method":"POST","path":"/upload"}
+2025-02-26T20:20:47.296Z info: Request c296251b-b56e-4bae-a4ce-a4ee9f947f57 completed {"fileName":"1740601247281.csv","fileSize":2399999,"duration":1,"status":"success"}
+2025-02-26T20:21:09.217Z info: Request 652ea927-c07d-4b00-98ec-c59f046ce85e started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:09.219Z info: Request 652ea927-c07d-4b00-98ec-c59f046ce85e completed {"fileName":"1740601269216.csv","fileSize":23,"duration":2,"status":"success"}
+2025-02-26T20:21:09.229Z info: Request 9e63ccc6-c1e0-47be-882c-822d5c250379 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:09.229Z error: Request 9e63ccc6-c1e0-47be-882c-822d5c250379 failed: No file uploaded 
+2025-02-26T20:21:09.236Z info: Request 1efa5a30-5363-4ddf-b6d0-d740e92418ee started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:09.236Z info: Request 1efa5a30-5363-4ddf-b6d0-d740e92418ee completed {"fileName":"1740601269235.csv","fileSize":23,"duration":1,"status":"success"}
+2025-02-26T20:21:09.244Z info: Request 1d388c5d-0607-448f-98a9-296fdf486d2f started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:09.244Z info: Request 1d388c5d-0607-448f-98a9-296fdf486d2f completed {"fileName":"1740601269240.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:09.271Z info: Request 5a31f46a-3415-4b73-8c08-395818ab57a4 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:09.271Z info: Request 5a31f46a-3415-4b73-8c08-395818ab57a4 completed {"fileName":"1740601269265.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:52.021Z info: Request a97e696f-d46d-4e78-af78-f8dad08a7a38 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.023Z info: Request a97e696f-d46d-4e78-af78-f8dad08a7a38 completed {"fileName":"1740601312019.csv","fileSize":23,"duration":2,"status":"success"}
+2025-02-26T20:21:52.042Z info: Request a4461285-d337-474f-9223-73336c82d201 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.042Z error: Request a4461285-d337-474f-9223-73336c82d201 failed: No file uploaded 
+2025-02-26T20:21:52.056Z info: Request 0b123263-a214-438f-8706-c6063f3bd7fe started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.056Z info: Request 0b123263-a214-438f-8706-c6063f3bd7fe completed {"fileName":"1740601312056.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:21:52.077Z info: Request fe3365e3-0940-46b7-95f3-8754685dc90b started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.077Z info: Request fe3365e3-0940-46b7-95f3-8754685dc90b completed {"fileName":"1740601312067.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:52.088Z info: Request 716b6f19-9601-4301-b854-df9d6b4e3c79 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.088Z info: Request 716b6f19-9601-4301-b854-df9d6b4e3c79 completed {"fileName":"1740601312084.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:52.104Z info: Request 114acf08-03f6-43f1-bc3d-e933fd98e7d6 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.104Z info: Request 114acf08-03f6-43f1-bc3d-e933fd98e7d6 completed {"fileName":"1740601312097.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:52.104Z info: Request 9a7e09eb-198c-44af-a0f3-32f9ed2ac37b started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:52.105Z info: Request 9a7e09eb-198c-44af-a0f3-32f9ed2ac37b completed {"fileName":"1740601312098.csv","fileSize":2399999,"duration":1,"status":"success"}
+2025-02-26T20:21:57.400Z info: Request 229ad960-22e9-41a2-ac4a-ef6c46d93df4 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.401Z info: Request 229ad960-22e9-41a2-ac4a-ef6c46d93df4 completed {"fileName":"1740601317399.csv","fileSize":23,"duration":1,"status":"success"}
+2025-02-26T20:21:57.412Z info: Request 1caf9b1b-b701-4f99-bdac-a636cdd5254f started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.412Z error: Request 1caf9b1b-b701-4f99-bdac-a636cdd5254f failed: No file uploaded 
+2025-02-26T20:21:57.419Z info: Request baa63338-9cdb-440c-811d-38af4a0a406b started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.419Z info: Request baa63338-9cdb-440c-811d-38af4a0a406b completed {"fileName":"1740601317418.csv","fileSize":23,"duration":0,"status":"success"}
+2025-02-26T20:21:57.427Z info: Request 2022cdf6-a71b-45e8-9853-a9b41964816f started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.427Z info: Request 2022cdf6-a71b-45e8-9853-a9b41964816f completed {"fileName":"1740601317423.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:57.437Z info: Request 4160efe3-c7da-4498-ba00-a5eaa69768f6 started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.437Z info: Request 4160efe3-c7da-4498-ba00-a5eaa69768f6 completed {"fileName":"1740601317433.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:57.454Z info: Request da2f1ab5-2dae-45f1-802d-4feb4b59be4b started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.454Z info: Request da2f1ab5-2dae-45f1-802d-4feb4b59be4b completed {"fileName":"1740601317446.csv","fileSize":2399999,"duration":0,"status":"success"}
+2025-02-26T20:21:57.455Z info: Request ae6a16dc-a0a4-4bfc-879e-8eda730c33fc started {"method":"POST","path":"/upload"}
+2025-02-26T20:21:57.455Z info: Request ae6a16dc-a0a4-4bfc-879e-8eda730c33fc completed {"fileName":"1740601317448.csv","fileSize":2399999,"duration":0,"status":"success"}
