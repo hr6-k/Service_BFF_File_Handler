@@ -6,6 +6,9 @@ import path from 'path';
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import logger from './logger';
+import pidusage from 'pidusage';
+import os from 'os';
+import { healthCheck_C } from './healthCheckController'; // Import the healthCheck_C function
 
 dotenv.config();
 
@@ -55,6 +58,7 @@ const processQueue = () => {
   }
 };
 
+// POST route for file upload
 app.post('/upload', upload.single('file'), (req: CustomRequest, res: Response) => {
   requestQueue.push(() => {
     return new Promise((resolve, reject) => {
@@ -74,6 +78,47 @@ app.post('/upload', upload.single('file'), (req: CustomRequest, res: Response) =
   processQueue();
 });
 
+// Health Check Route 1
+app.get('/health', async (req: Request, res: Response) => {
+  try {
+    pidusage(process.pid, (err, stats) => {
+      if (err) {
+        return res.status(500).json({
+          status: 'unhealthy',
+          error: 'An issue occurred while checking the system status.',
+        });
+      }
+
+      // Get system memory usage
+      const memoryUsage = os.freemem();
+      const totalMemory = os.totalmem();
+      const memoryPercent = (memoryUsage / totalMemory) * 100;
+
+      // Simulate external services status (this can be expanded)
+      const externalServices = {
+        database: 'healthy',
+        anotherAPI: 'healthy',
+      };
+
+      res.json({
+        status: 'healthy',
+        cpuUsage: `${stats.cpu.toFixed(2)}%`,
+        freeMemory: `${memoryPercent.toFixed(2)}%`,
+        externalServices,
+      });
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'unhealthy',
+      error: 'An issue occurred while checking the system status.',
+    });
+  }
+});
+
+// Health Check Route 2 (with external service data)
+app.get('/health-check', healthCheck_C);  // Register the healthCheck_C route
+
+// Global error handler for Multer errors
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof multer.MulterError) {
     res.status(500).json({ message: `Multer error: ${err.message}` });

@@ -1,3 +1,5 @@
+
+
 import { Request, Response } from 'express';
 import { getExternalData } from './externalService';  // Import the external service function
 
@@ -13,10 +15,14 @@ export const healthCheck_C = async (req: Request, res: Response) => {
       externalServiceData: externalData,  // Data from the external service
     });
   } catch (error) {
+    console.error('Health Check Error:', error); // Log the error for debugging
+
     // If an error occurs, return an "unhealthy" status
     res.status(500).json({
       status: 'unhealthy',
       error: 'An issue occurred while checking system health or external services.',
+      // You can also include the error details here for debugging purposes
+      errorDetails: error instanceof Error ? error.message : error,
     });
   }
 };
